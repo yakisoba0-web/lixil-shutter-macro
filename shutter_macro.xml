@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- シャッターを開く -->
+<macro name="shutter_open" icon="UP">
+  <assert-service
+      description="Ensure shutter control service exists"
+      uuid="2141E110-213A-11E6-B67B-9E71128CAE77">
+
+    <assert-characteristic
+        description="Ensure write characteristic exists"
+        uuid="2141E112-213A-11E6-B67B-9E71128CAE77">
+      <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
+    </assert-characteristic>
+
+  </assert-service>
+
+  <write
+      description="Open shutter"
+      service-uuid="2141E110-213A-11E6-B67B-9E71128CAE77"
+      characteristic-uuid="2141E112-213A-11E6-B67B-9E71128CAE77"
+      value=“0203”
+      type="WRITE_COMMAND"/>
+</macro>
+
+<!-- シャッターを閉じる -->
+<macro name="shutter_close" icon="DOWN">
+  <assert-service
+      description="Ensure shutter control service exists"
+      uuid="2141E110-213A-11E6-B67B-9E71128CAE77">
+
+    <assert-characteristic
+        description="Ensure write characteristic exists"
+        uuid="2141E112-213A-11E6-B67B-9E71128CAE77">
+      <property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
+    </assert-characteristic>
+
+  </assert-service>
+
+  <write
+      description="Close shutter"
+      service-uuid="2141E110-213A-11E6-B67B-9E71128CAE77"
+      characteristic-uuid="2141E112-213A-11E6-B67B-9E71128CAE77"
+      value=“0204”
+      type="WRITE_COMMAND"/>
+</macro>
