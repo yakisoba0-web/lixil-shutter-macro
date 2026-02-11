@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macro name="shutter_open" icon="UP">
+  <write
+    service-uuid="2141E110-213A-11E6-B67B-9E71128CAE77"
+    characteristic-uuid="2141E112-213A-11E6-B67B-9E71128CAE77"
+    value="0203"
+    type="WRITE_COMMAND"/>
+</macro>
