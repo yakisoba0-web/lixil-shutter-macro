@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <macros>
-<macro name="shutter_open" icon="UP">
-<assert-service uuid="2141E110-213A-11E6-B67B-9E71128CAE77">
-<assert-characteristic uuid="2141E112-213A-11E6-B67B-9E71128CAE77">
-<property name="WRITE_WITHOUT_RESPONSE" requirement="MANDATORY"/>
-</assert-characteristic>
-</assert-service>
-<write service-uuid="2141E110-213A-11E6-B67B-9E71128CAE77" characteristic-uuid="2141E112-213A-11E6-B67B-9E71128CAE77" value="0203" type="WRITE_COMMAND"/>
-</macro>
+  <macro name="shutter_open" icon="UP">
+    <ble>
+      <write
+        service_uuid="2141E110-213A-11E6-B67B-9E71128CAE77"
+        characteristic_uuid="2141E112-213A-11E6-B67B-9E71128CAE77"
+        value="0203"
+        write_type="without_response" />
+    </ble>
+  </macro>
 </macros>
